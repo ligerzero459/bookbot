@@ -15,7 +15,18 @@
       "name": "Run: Main",
       "type": "debugpy",
       "request": "launch",
-      "program": "main.py"
+      "program": "main.py",
+      "args": ["${input:pickFile}"]
+    }
+  ],
+  "inputs": [
+    {
+      "id": "pickFile",
+      "type": "command",
+      "command": "extension.commandvariable.file.pickFile",
+      "args": {
+        "include": "**/*.{txt,md,doc,docx}"
+      }
     }
   ]
 }
